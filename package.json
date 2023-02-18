@@ -1,14 +1,14 @@
 {
   "name": "mern---thapa-technical",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Mern stack website",
+  "main": "app.js",
   "scripts": {
-    "start": "nodemon app.js",
+    "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
+  "author": "Shahil Kumar",
   "license": "ISC",
   "dependencies": {
     "bcryptjs": "^2.4.3",
