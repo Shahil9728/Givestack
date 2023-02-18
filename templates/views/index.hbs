@@ -1,0 +1,53 @@
+{{>header}}
+
+
+
+{{#if data}}
+<div class="alert alert-warning alert-dismissible fade show" role="alert" style="display:block">
+    <strong>Congratulations!</strong> You are successfully Login
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close" style="float: right;border: none;">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+{{/if}}
+
+
+
+<main>
+    <div class="main-div">
+        <div class="div-left">
+        </div>
+        <div class="div-right">
+        </div>
+        <div class="main-content">
+            <h3 class="welcome">
+                WELCOME 
+                <span style="color:red" class="welcome">&nbsp;{{name}}</span>
+            </h3>
+                <h4 class="mern-line">We are the MERN Developer</h2>
+        </div>
+    </div>
+</main>
+
+
+
+
+
+
+
+<script>
+    const mobile_nav = document.querySelector(".mobile-navbar-btn");
+    const nav_header = document.querySelector('.header')
+    const toggleNavabr = () => {
+        nav_header.classList.toggle('active');
+    }
+    mobile_nav.addEventListener('click', () => toggleNavabr())
+
+
+    const alert_btn = document.querySelector('.close');
+    const alert = document.querySelector('.alert')
+</script>
+
+</body>
+
+</html>

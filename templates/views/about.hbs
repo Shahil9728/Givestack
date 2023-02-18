@@ -1,0 +1,96 @@
+{{>header}}
+
+<div class="login-container about-login">
+    <div class="about-left">
+        {{#if img}}
+        {{#if data}}
+        <div class="img-div">
+            <img src="{{data.image}}" alt=" Random Image" class="about-img-j">
+        </div>
+        {{/if}}
+        {{else}}
+        <div class="img-div">
+            <img src="../images/profile.jpeg" alt=" Profile Image" class="about-img">
+        </div>
+        {{/if}}
+
+        <div class="left-data">
+            <div class="work">
+                <p class="work-link" style="font-weight: 600;color:gray">
+                    WORK LINK
+                </p>
+                <p><a href="" class="about-a">Youtuber</a></p>
+                <p><a href="" class="about-a">Instagram</a></p>
+                <p><a href="" class="about-a">Mern Stack</a></p>
+                <p><a href="" class="about-a">Github</a></p>
+            </div>
+            <div class="skills">
+                <p class="skill-link" style="font-weight: 600;color:gray">SKILLS</p>
+                <p>MERN Dev</p>
+                <p>Web Developer</p>
+                <p>Figma</p>
+                <p>Software Engineer</p>
+            </div>
+        </div>
+    </div>
+    {{#if data}}
+    <div class="about-right">
+        <div class="name-div">
+            <h1>{{data.name}}</h1>
+            <h4 class="name-profession" style="color:#5dc0f6">{{data.work}}</h4>
+        </div>
+        <div class="about-div" style="margin-top: 5rem;">
+            <h2 style="font-weight: 600; border-bottom:3px solid #5dc0f6;display:inline">About</h2>
+            <div class="data">
+                <div class="userid">
+                    <p>User Id</p>
+                    <p>Name</p>
+                    <p>Email</p>
+                    <p>Phone</p>
+                    <p>Profession</p>
+                </div>
+                <div class="database">
+                    <p>{{data._id}}</p>
+                    <p>{{data.name}}</p>
+                    <p>{{data.email}}</p>
+                    <p>{{data.phone}}</p>
+                    <p>{{data.work}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{else}}
+    <div class="about-right">
+        <div class="name-div">
+            <h1>Shahil Kumar</h1>
+            <h4 class="name-profession" style="color:#5dc0f6">Web Developer</h4>
+        </div>
+        <div class="about-div" style="margin-top: 5rem;">
+            <h2 style="font-weight: 600; border-bottom:3px solid #5dc0f6;display:inline">About</h2>
+            <div class="data">
+                <div class="userid">
+                    <p>User Id</p>
+                    <p>Name</p>
+                    <p>Email</p>
+                    <p>Phone</p>
+                    <p>Profession</p>
+                </div>
+                <div class="database">
+                    <p>27623b4kjhj4kb23hv4hj21</p>
+                    <p>Shahil Kumar</p>
+                    <p>shahil123@gmail.com</p>
+                    <p>9138300882</p>
+                    <p>Web Developer</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{/if}}
+
+</div>
+
+<script>
+
+</script>
+
+{{>end}}

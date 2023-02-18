@@ -1,0 +1,82 @@
+{{>header}}
+
+{{!-- {{#if data}}
+<div class="alert alert-warning alert-dismissible fade show" role="alert" style="display:block">
+    <strong>Congratulations!</strong> You are successfully Login
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+{{/if}} --}}
+
+<div class="login-container">
+    <form action="/register" method="post">
+        <div class="login-div">
+            <h1 style="font-size: 4rem;">Sign Up</h1>
+            <div>
+                <span class="error" id="error" style="color:rgb(255, 60, 60);font-size: 1.5rem;">{{error}}</span>
+            </div>
+            <div class="signin-email">
+                <ion-icon name="person" class="ion-icon"></ion-icon>
+                <input type="name" name="name" id="" class="sigin-input" placeholder="Your Name">
+            </div>
+            <div class="signin-email">
+                <ion-icon name="mail" class="ion-icon"></ion-icon>
+                <input type="email" name="email" id="email" class="sigin-input" placeholder="Your Email">
+                <span id="error-message"></span>
+            </div>
+            <div class="signin-email">
+                <ion-icon name="call" class="ion-icon"></ion-icon>
+                <input type="number" name="phone" id="" class="sigin-input" placeholder="Mobile Number">
+            </div>
+            <div class="signin-email">
+                <ion-icon name="bag" class="ion-icon"></ion-icon>
+                <input type="text" name="work" id="" class="sigin-input" placeholder="Your Profession">
+            </div>
+            <div class="signin-pass">
+                <ion-icon name="lock-closed" class="ion-icon"></ion-icon>
+                <input type="password" name="password" id="" class="sigin-input" placeholder="Password">
+            </div>
+            <div class="signin-pass">
+                <ion-icon name="lock-open" class="ion-icon"></ion-icon>
+                <input type="password" name="cpassword" id="" class="sigin-input" placeholder="Confirm Password">
+            </div>
+            <div class="send-msg-btn">
+                <button type="submit" class="contact-btn">Register</button>
+            </div>
+        </div>
+    </form>
+    <div class="login-img">
+        <img src="../images/register.png" alt="" class="signin-illu">
+        <p><a href="/login" class="signin-a">I am already register</a></p>
+    </div>
+</div>
+
+<script>
+
+    const emailinput = document.querySelector('email');
+    const errorMessage = document.querySelector('error-message');
+    fucntion validateEmail(email)
+    {
+        const regerx = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return regex(email);
+    }
+
+    function onSubmit(event) {
+        event.preventDefault();
+        if (!validateEmail(emailinput.value)) {
+            errorMessage.textContent = "Please enter a valid email address";
+        } else {
+            errorMessage.textContent = '';
+        }
+    }
+
+    emailinput.addEventListener('input', () => {
+        errorMessage.textContent = '';
+    })
+
+    document.querySelector('form').addEventListener('submit', onsubmit);
+
+</script>
+
+{{>end}}

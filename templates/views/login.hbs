@@ -1,0 +1,38 @@
+{{>header}}
+
+<div class="login-container">
+    <div class="login-img">
+        <img src="../images/login.png" alt="" class="signin-illu">
+        <p><a href="/register" class="signin-a">Create a account</a></p>
+    </div>
+    <form action="/signin" method="post">
+        <div class="login-div">
+            <h1 style="font-size: 4rem;">Sign In</h1>
+            <div>
+                <span class="error" style="color:rgb(255, 60, 60);font-size: 1.5rem;">{{error}}</span>
+            </div>
+            <div class="signin-email">
+                <ion-icon name="person-circle-outline" class="ion-icon"></ion-icon>
+                <input type="email" name="email" id="" class="sigin-input" placeholder="Your Email">
+            </div>
+            <div class="signin-pass">
+                <ion-icon name="lock-closed-outline" class="ion-icon"></ion-icon>
+                <input type="password" name="password" id="password" class="sigin-input" placeholder="Password">
+            </div>
+            <div class="send-msg-btn">
+                <button type="submit" class="contact-btn">Log In</button>
+            </div>
+            <div class="signin-share">
+                <p style="font-size: 1.2rem;">Or login with &nbsp; &nbsp;</p>
+                <div class="share-icon">
+                    <img src="../images/facebook.png" alt="" id="facebook">
+                    <img src="../images/twitter.png" alt="" id="twitter">
+                    <img src="../images/google.png" alt="" id="google">
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+
+{{>end}}
