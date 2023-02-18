@@ -53,7 +53,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-![Alt image](src/templates/images/home1.png)
+![Alt image](templates/images/gs1.png)
 
 Our website provides a secure login and registration system based on JWT (JSON Web Token) authentication. This allows users to securely log in and access their accounts with a unique token that verifies their identity. Our system is designed to prevent unauthorized access and keep user data safe. Users can easily register for an account and receive a JWT token upon successful registration. Our system also includes password reset functionality for added security. Overall, our website provides a user-friendly and secure login and registration experience for all users.
 
