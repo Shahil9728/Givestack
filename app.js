@@ -4,7 +4,7 @@ const mongoose = require('mongoose')
 const app = express();
 dotenv.config({path:'./config.env'});
 require('./db/conn')
-const PORT = process.env.PORT || 4000;
+const port = process.env.PORT || 4000;
 const path = require('path')
 const hbs = require('hbs')
 const exphbs = require('express-handlebars');
@@ -54,8 +54,8 @@ app.get('/signup',(req,res)=>{
 })
 
 
-app.listen(PORT,()=>{
-    console.log(`Server is running at http://localhost:${PORT}/`)
+app.listen(port,()=>{
+    console.log(`Server is running at http://localhost:${port}/`)
 })
 
 
