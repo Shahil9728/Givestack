@@ -91,7 +91,17 @@ const middleware = async (req, res, next) => {
 
 
 router.get('/',middleware, (req, res) => {
-    res.render('index.hbs', { data:false})
+    if (userLoggedIn) {
+        if (dataflag) {
+            dataflag = false;
+            return res.render('index.hbs', { userLoggedIn: true, data: true,name:username })
+        }
+        else {
+            return res.render('index.hbs', { userLoggedIn: true, data: false,name:username })
+        }
+    }
+    return res.render('index.hbs', { userLoggedIn: false, data: false,name:null });
+//     res.render('index.hbs', { data:false})
 })
 
 var dataflag = true;
