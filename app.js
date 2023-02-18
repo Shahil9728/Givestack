@@ -4,7 +4,7 @@ const mongoose = require('mongoose')
 const app = express();
 dotenv.config({path:'./config.env'});
 require('./db/conn')
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 4000;
 const path = require('path')
 const hbs = require('hbs')
 const exphbs = require('express-handlebars');
